@@ -1,0 +1,518 @@
+% Bias references: entries relevant to LLM/NLP bias evaluation.
+% Entries marked [NEW] were not in custom.bib.
+% All entries have a url or doi verified via web search.
+
+% ============================================================
+% BENCHMARKS AND DATASETS
+% ============================================================
+
+@inproceedings{parrish2022bbq,
+  title={{BBQ}: A Hand-Built Bias Benchmark for Question Answering},
+  author={Parrish, Alicia and Chen, Angelica and Nangia, Nikita and Padmakumar, Vishakh and Phang, Jason and Thompson, Jana and Htut, Phu Mon and Bowman, Samuel},
+  booktitle={Findings of the Association for Computational Linguistics: ACL 2022},
+  pages={2086--2105},
+  year={2022},
+  url={https://aclanthology.org/2022.findings-acl.165/}
+}
+
+@inproceedings{nadeem2021stereoset,
+  title={{StereoSet}: Measuring stereotypical bias in pretrained language models},
+  author={Nadeem, Moin and Bethke, Anna and Reddy, Siva},
+  booktitle={Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)},
+  pages={5356--5371},
+  year={2021},
+  url={https://aclanthology.org/2021.acl-long.416/}
+}
+
+% [NEW] Winogender schemas — gender bias in coreference resolution
+@inproceedings{rudinger2018gender,
+  title={Gender Bias in Coreference Resolution},
+  author={Rudinger, Rachel and Naradowsky, Jason and Leonard, Brian and Van Durme, Benjamin},
+  booktitle={Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies},
+  pages={8--14},
+  year={2018},
+  publisher={Association for Computational Linguistics},
+  address={New Orleans, Louisiana},
+  url={https://aclanthology.org/N18-2002/}
+}
+
+@misc{zhao_gender_2018,
+  title={Gender Bias in Coreference Resolution: Evaluation and Debiasing Methods},
+  url={https://aclanthology.org/N18-2003/},
+  doi={10.48550/arXiv.1804.06876},
+  number={arXiv:1804.06876},
+  publisher={arXiv},
+  author={Zhao, Jieyu and Wang, Tianlu and Yatskar, Mark and Ordonez, Vicente and Chang, Kai-Wei},
+  date={2018-04-18},
+  eprinttype={arxiv},
+  eprint={1804.06876 [cs]},
+}
+
+% [NEW] CrowS-Pairs — social bias benchmark for masked language models
+@inproceedings{nangia2020crows,
+  title={{CrowS-Pairs}: A Challenge Dataset for Measuring Social Biases in Masked Language Models},
+  author={Nangia, Nikita and Vania, Clara and Bhalerao, Rasika and Bowman, Samuel R.},
+  booktitle={Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  pages={1953--1967},
+  year={2020},
+  publisher={Association for Computational Linguistics},
+  url={https://aclanthology.org/2020.emnlp-main.154/}
+}
+
+% [NEW] BOLD — bias in open-ended language generation
+@inproceedings{dhamala2021bold,
+  title={{BOLD}: Dataset and Metrics for Measuring Biases in Open-Ended Language Generation},
+  author={Dhamala, Jwala and Sun, Tony and Kumar, Varun and Krishna, Satyapriya and Pruksachatkun, Yada and Chang, Kai-Wei and Gupta, Rahul},
+  booktitle={Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency},
+  pages={862--872},
+  year={2021},
+  publisher={ACM},
+  doi={10.1145/3442188.3445924},
+  url={https://dl.acm.org/doi/10.1145/3442188.3445924}
+}
+
+% [NEW] SEAT — measuring social biases in sentence encoders
+@inproceedings{may2019measuring,
+  title={On Measuring Social Biases in Sentence Encoders},
+  author={May, Chandler and Wang, Alex and Bordia, Shikha and Bowman, Samuel R. and Rudinger, Rachel},
+  booktitle={Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)},
+  pages={622--628},
+  year={2019},
+  publisher={Association for Computational Linguistics},
+  url={https://aclanthology.org/N19-1063/}
+}
+
+% [NEW] WinoMT — gender bias in machine translation
+@inproceedings{stanovsky2019evaluating,
+  title={Evaluating Gender Bias in Machine Translation},
+  author={Stanovsky, Gabriel and Smith, Noah A. and Zettlemoyer, Luke},
+  booktitle={Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics},
+  pages={1679--1684},
+  year={2019},
+  publisher={Association for Computational Linguistics},
+  url={https://aclanthology.org/P19-1164/}
+}
+
+@inproceedings{baumler-rudinger-2022-recognition,
+  title={Recognition of They/Them as Singular Personal Pronouns in Coreference Resolution},
+  author={Baumler, Connor and Rudinger, Rachel},
+  booktitle={Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies},
+  month=jul,
+  year={2022},
+  address={Seattle, United States},
+  publisher={Association for Computational Linguistics},
+  url={https://aclanthology.org/2022.naacl-main.250/},
+  doi={10.18653/v1/2022.naacl-main.250},
+  pages={3426--3432},
+}
+
+% ============================================================
+% FOUNDATIONAL WORD EMBEDDING BIAS PAPERS
+% ============================================================
+
+@article{caliskan2017semantics,
+  title={Semantics derived automatically from language corpora contain human-like biases},
+  author={Caliskan, Aylin and Bryson, Joanna J and Narayanan, Arvind},
+  journal={Science},
+  volume={356},
+  number={6334},
+  pages={183--186},
+  year={2017},
+  publisher={American Association for the Advancement of Science},
+  doi={10.1126/science.aal4230},
+  url={https://www.science.org/doi/10.1126/science.aal4230}
+}
+
+@article{bolukbasi2016man,
+  title={Man is to computer programmer as woman is to homemaker? Debiasing word embeddings},
+  author={Bolukbasi, Tolga and Chang, Kai-Wei and Zou, James Y and Saligrama, Venkatesh and Kalai, Adam T},
+  journal={Advances in Neural Information Processing Systems},
+  volume={29},
+  year={2016},
+  url={https://arxiv.org/abs/1607.06520}
+}
+
+@article{garg2018word,
+  title={Word embeddings quantify 100 years of gender and ethnic stereotypes},
+  author={Garg, Nikhil and Schiebinger, Londa and Jurafsky, Dan and Zou, James},
+  journal={Proceedings of the National Academy of Sciences},
+  volume={115},
+  number={16},
+  pages={E3635--E3644},
+  year={2018},
+  publisher={National Acad Sciences},
+  doi={10.1073/pnas.1720347115},
+  url={https://doi.org/10.1073/pnas.1720347115}
+}
+
+% [NEW] Lipstick on a Pig — debiasing methods are superficial
+@inproceedings{gonen2019lipstick,
+  title={Lipstick on a Pig: Debiasing Methods Cover up Systematic Gender Biases in Word Embeddings But do not Remove Them},
+  author={Gonen, Hila and Goldberg, Yoav},
+  booktitle={Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)},
+  pages={609--614},
+  year={2019},
+  publisher={Association for Computational Linguistics},
+  url={https://aclanthology.org/N19-1061/}
+}
+
+@inproceedings{zhaoLearningGenderNeutralWord2018,
+  title={Learning Gender-Neutral Word Embeddings},
+  author={Zhao, Jieyu and Zhou, Yichao and Li, Zeyu and Wang, Wei and Chang, Kai-Wei},
+  booktitle={Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing},
+  pages={4847--4853},
+  year={2018},
+  publisher={Association for Computational Linguistics},
+  doi={10.18653/v1/D18-1521},
+  url={https://aclanthology.org/D18-1521/}
+}
+
+% [NEW] Measuring bias in contextualized (BERT) representations
+@inproceedings{kurita2019measuring,
+  title={Measuring Bias in Contextualized Word Representations},
+  author={Kurita, Keita and Vyas, Nidhi and Pareek, Ayush and Black, Alan W. and Tsvetkov, Yulia},
+  booktitle={Proceedings of the First Workshop on Gender Bias in Natural Language Processing},
+  pages={166--172},
+  year={2019},
+  publisher={Association for Computational Linguistics},
+  url={https://aclanthology.org/W19-3823/}
+}
+
+% ============================================================
+% BIAS IN LANGUAGE GENERATION
+% ============================================================
+
+@inproceedings{sheng2019woman,
+  title={The Woman Worked as a Babysitter: On Biases in Language Generation},
+  author={Sheng, Emily and Chang, Kai-Wei and Natarajan, Prem and Peng, Nanyun},
+  booktitle={Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)},
+  pages={3407--3412},
+  year={2019},
+  url={https://aclanthology.org/D19-1339/}
+}
+
+@inproceedings{sheng2020towards,
+  title={Towards Controllable Biases in Language Generation},
+  author={Sheng, Emily and Chang, Kai-Wei and Natarajan, Prem and Peng, Nanyun},
+  booktitle={Findings of the Association for Computational Linguistics: EMNLP 2020},
+  pages={3239--3254},
+  year={2020},
+  url={https://aclanthology.org/2020.findings-emnlp.291/}
+}
+
+@inproceedings{abid2021persistent,
+  title={Persistent Anti-{M}uslim Bias in Large Language Models},
+  author={Abid, Abubakar and Farooqi, Maheen and Zou, James},
+  booktitle={Proceedings of the 2021 AAAI/ACM Conference on AI, Ethics, and Society},
+  pages={298--306},
+  year={2021},
+  doi={10.1145/3461702.3462624},
+  url={https://dl.acm.org/doi/10.1145/3461702.3462624}
+}
+
+@inproceedings{lucyGenderRepresentationBias2021a,
+  title={Gender and Representation Bias in {GPT-3} Generated Stories},
+  author={Lucy, Li and Bamman, David},
+  booktitle={Proceedings of the Third Workshop on Narrative Understanding},
+  pages={48--55},
+  year={2021},
+  publisher={Association for Computational Linguistics},
+  doi={10.18653/v1/2021.nuse-1.5},
+  url={https://aclanthology.org/2021.nuse-1.5/}
+}
+
+% [NEW] Gender biases in LLM-generated reference letters
+@inproceedings{wan2023kelly,
+  title={{``Kelly is a Warm Person, Joseph is a Role Model'': Gender Biases in LLM-Generated Reference Letters}},
+  author={Wan, Yixin and Pu, George and Sun, Jiao and Garimella, Aparna and Chang, Kai-Wei and Peng, Nanyun},
+  booktitle={Findings of the Association for Computational Linguistics: EMNLP 2023},
+  pages={3730--3748},
+  year={2023},
+  publisher={Association for Computational Linguistics},
+  url={https://aclanthology.org/2023.findings-emnlp.243/}
+}
+
+@inproceedings{cheng2023compost,
+  title={{CoMPosT}: Characterizing and Evaluating Caricature in {LLM} Simulations},
+  author={Cheng, Myra and Piccardi, Tiziano and Yang, Diyi},
+  booktitle={Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing},
+  pages={10853--10875},
+  year={2023},
+  url={https://aclanthology.org/2023.emnlp-main.669/}
+}
+
+% ============================================================
+% EXPLICIT VS. IMPLICIT BIAS / ALIGNMENT AND BIAS
+% ============================================================
+
+@inproceedings{sun-etal-2025-aligned,
+  title={Aligned but Blind: Alignment Increases Implicit Bias by Reducing Awareness of Race},
+  author={Sun, Lihao and Mao, Chengzhi and Hofmann, Valentin and Bai, Xuechunzi},
+  booktitle={Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  month=jul,
+  year={2025},
+  address={Vienna, Austria},
+  publisher={Association for Computational Linguistics},
+  url={https://aclanthology.org/2025.acl-long.1078/},
+  doi={10.18653/v1/2025.acl-long.1078},
+  pages={22167--22184},
+}
+
+@inproceedings{zhao-etal-2025-explicit,
+  title={Explicit vs. Implicit: Investigating Social Bias in Large Language Models through Self-Reflection},
+  author={Zhao, Yachao and Wang, Bo and Wang, Yan and Zhao, Dongming and He, Ruifang and Hou, Yuexian},
+  booktitle={Findings of the Association for Computational Linguistics: ACL 2025},
+  month=jul,
+  year={2025},
+  address={Vienna, Austria},
+  publisher={Association for Computational Linguistics},
+  url={https://aclanthology.org/2025.findings-acl.1/},
+  doi={10.18653/v1/2025.findings-acl.1},
+  pages={1--12},
+}
+
+@inproceedings{kotek2023gender,
+  title={Gender Bias and Stereotypes in Large Language Models},
+  author={Kotek, Hadas and Dockum, Rikker and Sun, David},
+  booktitle={Proceedings of The ACM Collective Intelligence Conference},
+  pages={12--24},
+  year={2023},
+  doi={10.1145/3582269.3615599},
+  url={https://dl.acm.org/doi/10.1145/3582269.3615599}
+}
+
+% ============================================================
+% SURVEYS AND CRITICAL FRAMEWORKS
+% ============================================================
+
+@inproceedings{benderDangersStochasticParrots2021,
+  title={On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?},
+  author={Bender, Emily M. and Gebru, Timnit and {McMillan-Major}, Angelina and Shmitchell, Shmargaret},
+  booktitle={Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency},
+  pages={610--623},
+  year={2021},
+  publisher={ACM},
+  doi={10.1145/3442188.3445922},
+  url={https://dl.acm.org/doi/10.1145/3442188.3445922}
+}
+
+% [NEW] Critical survey of "bias" in NLP — essential framing paper
+@inproceedings{blodgett2020language,
+  title={Language (Technology) is Power: A Critical Survey of ``Bias'' in {NLP}},
+  author={Blodgett, Su Lin and Barocas, Solon and {Daum{\'e} III}, Hal and Wallach, Hanna},
+  booktitle={Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics},
+  pages={5454--5476},
+  year={2020},
+  publisher={Association for Computational Linguistics},
+  url={https://aclanthology.org/2020.acl-main.485/}
+}
+
+@article{hovy2021five,
+  title={Five sources of bias in natural language processing},
+  author={Hovy, Dirk and Prabhumoye, Shrimai},
+  journal={Language and Linguistics Compass},
+  volume={15},
+  number={8},
+  pages={e12432},
+  year={2021},
+  publisher={Wiley Online Library},
+  doi={10.1111/lnc3.12432},
+  url={https://compass.onlinelibrary.wiley.com/doi/10.1111/lnc3.12432}
+}
+
+% [NEW] Comprehensive survey of bias and fairness in LLMs
+@article{gallegos2024bias,
+  title={Bias and Fairness in Large Language Models: A Survey},
+  author={Gallegos, Isabel O. and Rossi, Ryan A. and Barrow, Joe and Tanjim, Md Mehrab and Kim, Sungchul and Dernoncourt, Franck and Yu, Tong and Zhang, Ruiyi and Ahmed, Nesreen K.},
+  journal={Computational Linguistics},
+  volume={50},
+  number={3},
+  pages={1097--1179},
+  year={2024},
+  publisher={MIT Press},
+  url={https://aclanthology.org/2024.cl-3.8/}
+}
+
+% ============================================================
+% OCCUPATIONAL / REPRESENTATIONAL BIAS
+% ============================================================
+
+@inproceedings{dearteaga_bias_2019,
+  title={Bias in {BIOS}: A Case Study of Semantic Representation Bias in a High-Stakes Setting},
+  author={De-Arteaga, Maria and Romanov, Alexey and Wallach, Hanna and Chayes, Jennifer and Borgs, Christian and Chouldechova, Alexandra and Geyik, Sahin and Kenthapadi, Krishnaram and Kalai, Adam Tauman},
+  booktitle={Proceedings of the 2019 Conference on Fairness, Accountability, and Transparency},
+  pages={120--128},
+  year={2019},
+  publisher={ACM},
+  doi={10.1145/3287560.3287572},
+  url={https://dl.acm.org/doi/10.1145/3287560.3287572}
+}
+
+% Note: arXiv preprint 2019, published ACL 2020
+@inproceedings{gaut2020gender,
+  title={Towards Understanding Gender Bias in Relation Extraction},
+  author={Gaut, Andrew and Sun, Tony and Tang, Shirlyn and Huang, Yuxin and Qian, Jing and ElSherief, Mai and Zhao, Jieyu and Mirza, Diba and Belding, Elizabeth and Chang, Kai-Wei and Wang, William Yang},
+  booktitle={Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics},
+  pages={2943--2953},
+  year={2020},
+  publisher={Association for Computational Linguistics},
+  url={https://aclanthology.org/2020.acl-main.265/}
+}
+
+% [NEW] Intersectional occupational biases in generative LLMs
+@inproceedings{kirk2021bias,
+  title={Bias Out-of-the-Box: An Empirical Analysis of Intersectional Occupational Biases in Popular Generative Language Models},
+  author={Kirk, Hannah Rose and Jun, Yennie and Iqbal, Haider and Volpin, Filippo and Dreyer, Freddie and Shtedritski, Aleksandar and Asano, Yuki},
+  booktitle={Advances in Neural Information Processing Systems},
+  volume={34},
+  pages={2611--2624},
+  year={2021},
+  url={https://proceedings.neurips.cc/paper/2021/hash/1531beb762df4029513ebf9295e0d34f-Abstract.html}
+}
+
+% ============================================================
+% GENDER AND PRONOUN BIAS
+% ============================================================
+
+@inproceedings{hossainMISGENDEREDLimitsLarge2023,
+  title={{MISGENDERED}: Limits of Large Language Models in Understanding Pronouns},
+  author={Hossain, Tamanna and Dev, Sunipa and Singh, Sameer},
+  booktitle={Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages={5352--5367},
+  year={2023},
+  publisher={Association for Computational Linguistics},
+  doi={10.18653/v1/2023.acl-long.293},
+  url={https://aclanthology.org/2023.acl-long.293/}
+}
+
+@inproceedings{lauscherWelcomeModernWorld2022,
+  title={Welcome to the Modern World of Pronouns: Identity-Inclusive Natural Language Processing beyond Gender},
+  author={Lauscher, Anne and Crowley, Archie and Hovy, Dirk},
+  booktitle={Proceedings of the 29th International Conference on Computational Linguistics},
+  pages={1221--1232},
+  year={2022},
+  publisher={International Committee on Computational Linguistics},
+  url={https://aclanthology.org/2022.coling-1.105/}
+}
+
+@misc{brandlHowConservativeAre2022,
+  title={How Conservative Are Language Models? Adapting to the Introduction of Gender-Neutral Pronouns},
+  author={Brandl, Stephanie and Cui, Ruixiang and S{\o}gaard, Anders},
+  year={2022},
+  month=may,
+  number={arXiv:2204.10281},
+  eprint={2204.10281},
+  primaryclass={cs},
+  publisher={arXiv},
+  doi={10.48550/arXiv.2204.10281},
+  url={https://arxiv.org/abs/2204.10281}
+}
+
+% ============================================================
+% DIVERSITY AND CULTURAL BIAS
+% ============================================================
+
+@misc{lahotiImprovingDiversityDemographic2023,
+  title={Improving Diversity of Demographic Representation in Large Language Models via Collective-Critiques and Self-Voting},
+  author={Lahoti, Preethi and Blumm, Nicholas and Ma, Xiao and Kotikalapudi, Raghavendra and Potluri, Sahitya and Tan, Qijun and Srinivasan, Hansa and Packer, Ben and Beirami, Ahmad and Beutel, Alex and Chen, Jilin},
+  year={2023},
+  month=oct,
+  number={arXiv:2310.16523},
+  eprint={2310.16523},
+  primaryclass={cs},
+  publisher={arXiv},
+  doi={10.48550/arXiv.2310.16523},
+  url={https://arxiv.org/abs/2310.16523}
+}
+
+@inproceedings{pangAuditingCrossCulturalConsistency2023,
+  title={Auditing Cross-Cultural Consistency of Human-Annotated Labels for Recommendation Systems},
+  author={Pang, Rock Yuren and Cenatempo, Jack and Graham, Franklyn and Kuehn, Bridgette and Whisenant, Maddy and Botchway, Portia and Perez, Katie Stone and Koenecke, Allison},
+  booktitle={2023 ACM Conference on Fairness, Accountability, and Transparency},
+  pages={1531--1552},
+  year={2023},
+  doi={10.1145/3593013.3594098},
+  url={https://dl.acm.org/doi/10.1145/3593013.3594098}
+}
+
+% ============================================================
+% AI HARMS AND EVALUATION FRAMEWORKS
+% ============================================================
+
+@inproceedings{shelby2023sociotechnical,
+  title={Sociotechnical Harms of Algorithmic Systems: Scoping a Taxonomy for Harm Reduction},
+  author={Shelby, Renee and Rismani, Shalaleh and Henne, Kathryn and Moon, AJung and Rostamzadeh, Negar and Nicholas, Paul and Yilla-Akbari, N'Mah and Gallegos, Jess and Smart, Andrew and Garcia, Emilio and others},
+  booktitle={Proceedings of the 2023 AAAI/ACM Conference on AI, Ethics, and Society},
+  pages={723--741},
+  year={2023},
+  doi={10.1145/3600211.3604673},
+  url={https://dl.acm.org/doi/10.1145/3600211.3604673}
+}
+
+@techreport{friedlerAIRedTeamingNot2023,
+  title={{AI Red-Teaming Is Not a One-Stop Solution to AI Harms}: Recommendations for Using Red-Teaming for {AI} Accountability},
+  author={Friedler, Sorelle and Singh, Ranjit and {Blili-Hamelin}, Borhane and Metcalf, Jacob and Chen, Brian J},
+  year={2023},
+  institution={Data and Society},
+  url={https://datasociety.net/library/ai-red-teaming-is-not-a-one-stop-solution-to-ai-harms/}
+}
+
+@article{gillespie2024generative,
+  title={Generative {AI} and the Politics of Visibility},
+  author={Gillespie, Tarleton},
+  journal={Big Data \& Society},
+  volume={11},
+  number={2},
+  pages={20539517241252131},
+  year={2024},
+  publisher={SAGE Publications},
+  doi={10.1177/20539517241252131},
+  url={https://journals.sagepub.com/doi/10.1177/20539517241252131}
+}
+
+% ============================================================
+% IMPLICIT BIAS / STOCK MARKET / OTHER
+% ============================================================
+
+@inproceedings{chuang2022buy,
+  title={Buy Tesla, Sell Ford: Assessing Implicit Stock Market Preference in Pre-trained Language Models},
+  author={Chuang, Chengyu and Yang, Yi},
+  booktitle={Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)},
+  pages={100--105},
+  year={2022},
+  url={https://aclanthology.org/2022.acl-short.12/}
+}
+
+@inproceedings{bertschEvaluatingGenderBias2022,
+  title={Evaluating Gender Bias Transfer from Film Data},
+  author={Bertsch, Amanda and Oh, Ashley and Natu, Sanika and Gangu, Swetha and Black, Alan W. and Strubell, Emma},
+  booktitle={Proceedings of the 4th Workshop on Gender Bias in Natural Language Processing (GeBNLP)},
+  pages={235--243},
+  year={2022},
+  publisher={Association for Computational Linguistics},
+  doi={10.18653/v1/2022.gebnlp-1.24},
+  url={https://aclanthology.org/2022.gebnlp-1.24/}
+}
+
+% ============================================================
+% EVALEVAL ACL 2026 WORKSHOP — BIAS-RELEVANT PAPERS
+% https://evalevalai.com/events/2026-acl-workshop/
+% ============================================================
+
+% [NEW] How sociodemographic cues in prompts affect LLM outputs
+@inproceedings{weeber2026persona,
+  title={One Persona, Many Cues, Different Results: How Sociodemographic Cues Impact {LLM} Personalization},
+  author={Weeber, Franziska and Neplenbroek, Vera and Batzner, Jan and Pad{\'o}, Sebastian},
+  booktitle={Proceedings of the 1st Workshop on Evaluating Evaluations (EvalEval) at ACL 2026},
+  year={2026},
+  url={https://openreview.net/forum?id=oKiZ4EgUa5}
+}
+
+% [NEW] Community-centered measurement of cultural content in AI images
+@inproceedings{johnson2026community,
+  title={Community-Centered Measurement of Cultural Content in {AI} Images},
+  author={Johnson, Nari and Sudharsan, Deepthi and Hamna and Dalal, Samantha and Holroyd, Theo and Thieme, Anja and Heidari, Hoda and Massiceti, Daniela and Vaughan, Jennifer Wortman and Morrison, Cecily},
+  booktitle={Proceedings of the 1st Workshop on Evaluating Evaluations (EvalEval) at ACL 2026},
+  year={2026},
+  url={https://openreview.net/forum?id=GwJ6ypeh66}
+}

@@ -1,0 +1,217 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" width="800" height="900">
+  <!-- NOTICE: iceberg silhouette substantially generated/edited by an LLM (v2: shape retraced to match iceberg.jpg). -->
+  <defs>
+    <!-- Sky: bright arctic blue, lighter toward horizon -->
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#3a8fc7"/>
+      <stop offset="55%"  stop-color="#5fb5e0"/>
+      <stop offset="100%" stop-color="#82c8ea"/>
+    </linearGradient>
+
+    <!-- Deep ocean background -->
+    <linearGradient id="seaGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#0b3560"/>
+      <stop offset="35%"  stop-color="#082848"/>
+      <stop offset="100%" stop-color="#010810"/>
+    </linearGradient>
+
+    <!-- Underwater ice: radial glow, cyan-white core → dark blue edges -->
+    <radialGradient id="iceGlow" cx="50%" cy="40%" r="58%" fx="50%" fy="34%">
+      <stop offset="0%"   stop-color="#d4f3ff"/>
+      <stop offset="15%"  stop-color="#7de0ff"/>
+      <stop offset="38%"  stop-color="#25a8e0"/>
+      <stop offset="62%"  stop-color="#0c5a9a"/>
+      <stop offset="82%"  stop-color="#062d5c"/>
+      <stop offset="100%" stop-color="#020e20"/>
+    </radialGradient>
+
+    <!-- Above-water ice: sunlit right, shadowed left -->
+    <linearGradient id="aboveIce" x1="0" y1="0.5" x2="1" y2="0.5">
+      <stop offset="0%"   stop-color="#b8d4e8"/>
+      <stop offset="30%"  stop-color="#d8ecf8"/>
+      <stop offset="55%"  stop-color="#ffffff"/>
+      <stop offset="75%"  stop-color="#f0f8ff"/>
+      <stop offset="100%" stop-color="#c0d8ea"/>
+    </linearGradient>
+
+    <!-- Soft glow bloom on underwater ice -->
+    <filter id="bloom" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/>
+      <feBlend in="SourceGraphic" in2="blur" mode="screen"/>
+    </filter>
+
+    <!-- Water clips -->
+    <clipPath id="aboveWater">
+      <rect x="0" y="0" width="800" height="272"/>
+    </clipPath>
+    <clipPath id="belowWater">
+      <rect x="0" y="272" width="800" height="628"/>
+    </clipPath>
+  </defs>
+
+  <!-- ── SKY ───────────────────────────────────────────────── -->
+  <rect x="0" y="0" width="800" height="272" fill="url(#skyGrad)"/>
+
+  <!-- Wispy high clouds -->
+  <g fill="white" opacity="0.38">
+    <ellipse cx="110" cy="52"  rx="135" ry="11"/>
+    <ellipse cx="230" cy="44"  rx="75"  ry="7"/>
+    <ellipse cx="580" cy="68"  rx="160" ry="13"/>
+    <ellipse cx="695" cy="52"  rx="95"  ry="9"/>
+    <ellipse cx="450" cy="90"  rx="60"  ry="6"/>
+    <ellipse cx="340" cy="110" rx="45"  ry="5"/>
+  </g>
+
+  <!-- Horizon brightening -->
+  <rect x="0" y="245" width="800" height="27"
+        fill="url(#skyGrad)" opacity="0.5"/>
+
+  <!-- ── ABOVE-WATER ICEBERG ───────────────────────────────── -->
+  <!--
+    Compact peaked mass: sharp thin spike on the left, tall snowy
+    main peak just right of it, stepping down to a lower right shelf.
+    Base meets waterline ~x=264 to x=569.
+  -->
+  <path d="
+    M 264,272
+    C 270,258 278,246 286,236
+    C 293,227 299,222 305,212
+    C 311,200 318,182 326,166
+    L 333,148
+    C 336,156 340,166 346,174
+    C 351,180 356,182 362,178
+    C 368,172 374,160 382,148
+    C 392,134 402,126 412,128
+    C 420,130 425,142 430,154
+    C 434,164 439,170 446,170
+    C 452,170 458,164 464,158
+    C 470,152 476,150 482,156
+    C 488,162 491,172 494,184
+    C 497,196 502,206 510,214
+    C 518,222 525,230 530,240
+    C 535,250 542,260 552,266
+    C 558,270 564,272 569,272
+    L 264,272 Z
+  " fill="url(#aboveIce)" clip-path="url(#aboveWater)"/>
+
+  <!-- Left-side shadow on above-water ice -->
+  <path d="
+    M 264,272
+    C 270,258 278,246 286,236
+    C 293,227 299,222 305,212
+    C 311,200 318,182 326,166
+    L 333,148
+    C 336,156 340,166 346,174
+    L 348,196 346,220 350,244
+    L 356,262 354,272
+    L 264,272 Z
+  " fill="#8ab8d0" opacity="0.35" clip-path="url(#aboveWater)"/>
+
+  <!-- Bright sunlit face on the main peak's right flank -->
+  <path d="
+    M 412,128
+    C 420,130 425,142 430,154
+    C 434,164 439,170 446,170
+    C 452,170 458,164 464,158
+    L 470,180 474,206 482,228
+    L 492,250 500,266
+    L 470,266 448,258 430,244
+    L 418,222 412,196 410,168
+    L 411,146 412,128 Z
+  " fill="white" opacity="0.5" clip-path="url(#aboveWater)"/>
+
+  <!-- Snow-bright main peak -->
+  <ellipse cx="412" cy="132" rx="17" ry="11" fill="white" opacity="0.9"
+           clip-path="url(#aboveWater)"/>
+
+  <!-- ── OCEAN ────────────────────────────────────────────── -->
+  <rect x="0" y="272" width="800" height="628" fill="url(#seaGrad)"/>
+
+  <!-- ── UNDERWATER ICEBERG ─────────────────────────────── -->
+  <!--
+    Signature submerged mass: widest at the "shoulders" just below the
+    surface (x≈175 to x≈642), tapering down to a rounded, slightly
+    keeled bottom near y≈858. Large dark hollow/arch at the centre.
+  -->
+
+  <!-- Main ice body with glow -->
+  <path d="
+    M 175,360
+    C 168,402 182,442 202,472
+    C 216,502 210,536 206,566
+    C 201,600 206,642 222,676
+    C 238,712 262,746 294,774
+    C 324,800 358,816 396,822
+    C 421,826 446,830 470,826
+    C 500,820 528,805 552,786
+    C 580,760 606,730 624,696
+    C 640,663 646,626 642,590
+    C 638,556 628,524 632,490
+    C 636,454 646,420 642,386
+    C 638,358 632,340 626,330
+    C 600,302 560,287 500,283
+    L 400,281
+    C 300,281 238,300 175,360 Z
+  " fill="url(#iceGlow)" clip-path="url(#belowWater)"/>
+
+  <!-- Bright inner glow bloom -->
+  <ellipse cx="405" cy="540" rx="160" ry="195"
+           fill="#55d4f8" opacity="0.18" filter="url(#bloom)"
+           clip-path="url(#belowWater)"/>
+
+  <!-- Ice facet highlights — scattered lighter patches -->
+  <g clip-path="url(#belowWater)" opacity="0.45">
+    <!-- Upper-left facet -->
+    <path d="M 205,340 L 252,402 L 214,456 L 170,392 Z"
+          fill="#5cc8f0" opacity="0.5"/>
+    <!-- Left mid facet -->
+    <path d="M 196,485 L 242,548 L 214,606 L 172,542 Z"
+          fill="#3aacdc" opacity="0.45"/>
+    <!-- Central bright column -->
+    <path d="M 358,312 L 398,322 L 438,312 L 462,372
+             L 452,452 L 432,520 L 405,540 L 380,520
+             L 358,452 L 345,372 Z"
+          fill="#a8e8ff" opacity="0.28"/>
+    <!-- Upper-right facet -->
+    <path d="M 540,332 L 585,402 L 555,462 L 508,392 Z"
+          fill="#5cc8f0" opacity="0.45"/>
+    <!-- Right mid facet -->
+    <path d="M 600,448 L 640,518 L 620,578 L 580,510 Z"
+          fill="#3aacdc" opacity="0.4"/>
+    <!-- Right lower facet -->
+    <path d="M 560,628 L 600,692 L 578,746 L 538,684 Z"
+          fill="#2888b8" opacity="0.4"/>
+    <!-- Left lower facet -->
+    <path d="M 222,642 L 262,708 L 240,762 L 200,696 Z"
+          fill="#2888b8" opacity="0.4"/>
+    <!-- Bottom centre facets -->
+    <path d="M 348,742 L 384,786 L 364,814 L 326,776 Z"
+          fill="#1a6898" opacity="0.45"/>
+    <path d="M 440,750 L 478,792 L 458,818 L 420,780 Z"
+          fill="#1a6898" opacity="0.4"/>
+  </g>
+
+  <!-- Central cave-arch hollow (large recessed shadow at the core) -->
+  <path d="
+    M 342,582
+    C 332,624 342,678 368,716
+    C 390,748 424,758 448,728
+    C 470,702 478,652 474,610
+    C 471,576 458,556 436,552
+    C 416,549 402,562 384,560
+    C 368,558 354,552 346,562
+    C 340,568 340,575 342,582 Z
+  " fill="#041828" opacity="0.6" clip-path="url(#belowWater)"/>
+
+  <!-- ── WATERLINE ──────────────────────────────────────── -->
+  <!-- Horizon dark band -->
+  <rect x="0" y="268" width="800" height="8" fill="#072a50" opacity="0.85"/>
+
+  <!-- Surface glint lines -->
+  <g stroke="#88cce8" stroke-width="1.2" opacity="0.35">
+    <line x1="40"  y1="278" x2="200" y2="278"/>
+    <line x1="230" y1="282" x2="310" y2="282"/>
+    <line x1="500" y1="280" x2="680" y2="280"/>
+    <line x1="705" y1="276" x2="790" y2="276"/>
+  </g>
+</svg>
