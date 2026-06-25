@@ -36,16 +36,15 @@
   url={https://aclanthology.org/N18-2002/}
 }
 
-@misc{zhao_gender_2018,
+@inproceedings{zhao_gender_2018,
   title={Gender Bias in Coreference Resolution: Evaluation and Debiasing Methods},
-  url={https://aclanthology.org/N18-2003/},
-  doi={10.48550/arXiv.1804.06876},
-  number={arXiv:1804.06876},
-  publisher={arXiv},
   author={Zhao, Jieyu and Wang, Tianlu and Yatskar, Mark and Ordonez, Vicente and Chang, Kai-Wei},
-  date={2018-04-18},
-  eprinttype={arxiv},
-  eprint={1804.06876 [cs]},
+  booktitle={Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 2 (Short Papers)},
+  pages={15--20},
+  year={2018},
+  publisher={Association for Computational Linguistics},
+  doi={10.18653/v1/N18-2003},
+  url={https://aclanthology.org/N18-2003/},
 }
 
 % [NEW] CrowS-Pairs — social bias benchmark for masked language models
@@ -123,13 +122,13 @@
   url={https://www.science.org/doi/10.1126/science.aal4230}
 }
 
-@article{bolukbasi2016man,
+@inproceedings{bolukbasi2016man,
   title={Man is to computer programmer as woman is to homemaker? Debiasing word embeddings},
   author={Bolukbasi, Tolga and Chang, Kai-Wei and Zou, James Y and Saligrama, Venkatesh and Kalai, Adam T},
-  journal={Advances in Neural Information Processing Systems},
+  booktitle={Advances in Neural Information Processing Systems},
   volume={29},
   year={2016},
-  url={https://arxiv.org/abs/1607.06520}
+  url={https://proceedings.neurips.cc/paper/2016/hash/a486cd07e4ac3d270571622f4f316ec5-Abstract.html}
 }
 
 @article{garg2018word,
@@ -239,6 +238,17 @@
   pages={10853--10875},
   year={2023},
   url={https://aclanthology.org/2023.emnlp-main.669/}
+}
+
+% [NEW] Gender representation in AI-generated animal stories — "neutrality bites"
+@inproceedings{finkley2026neutrality,
+  title={Neutrality Bites: Gender Representation in {AI}-Generated Animal Stories},
+  author={Finkley, Imani and Li, Yuanxi and Walsh, Melanie},
+  booktitle={Proceedings of the 2026 ACM Conference on Fairness, Accountability, and Transparency},
+  year={2026},
+  publisher={ACM},
+  doi={10.1145/3805689.3812287},
+  url={https://dl.acm.org/doi/10.1145/3805689.3812287}
 }
 
 % ============================================================
@@ -395,34 +405,30 @@
   url={https://aclanthology.org/2022.coling-1.105/}
 }
 
-@misc{brandlHowConservativeAre2022,
+@inproceedings{brandlHowConservativeAre2022,
   title={How Conservative Are Language Models? Adapting to the Introduction of Gender-Neutral Pronouns},
   author={Brandl, Stephanie and Cui, Ruixiang and S{\o}gaard, Anders},
+  booktitle={Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies},
+  pages={3624--3630},
   year={2022},
-  month=may,
-  number={arXiv:2204.10281},
-  eprint={2204.10281},
-  primaryclass={cs},
-  publisher={arXiv},
-  doi={10.48550/arXiv.2204.10281},
-  url={https://arxiv.org/abs/2204.10281}
+  publisher={Association for Computational Linguistics},
+  doi={10.18653/v1/2022.naacl-main.265},
+  url={https://aclanthology.org/2022.naacl-main.265/}
 }
 
 % ============================================================
 % DIVERSITY AND CULTURAL BIAS
 % ============================================================
 
-@misc{lahotiImprovingDiversityDemographic2023,
+@inproceedings{lahotiImprovingDiversityDemographic2023,
   title={Improving Diversity of Demographic Representation in Large Language Models via Collective-Critiques and Self-Voting},
   author={Lahoti, Preethi and Blumm, Nicholas and Ma, Xiao and Kotikalapudi, Raghavendra and Potluri, Sahitya and Tan, Qijun and Srinivasan, Hansa and Packer, Ben and Beirami, Ahmad and Beutel, Alex and Chen, Jilin},
+  booktitle={Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing},
+  pages={10383--10405},
   year={2023},
-  month=oct,
-  number={arXiv:2310.16523},
-  eprint={2310.16523},
-  primaryclass={cs},
-  publisher={arXiv},
-  doi={10.48550/arXiv.2310.16523},
-  url={https://arxiv.org/abs/2310.16523}
+  publisher={Association for Computational Linguistics},
+  doi={10.18653/v1/2023.emnlp-main.643},
+  url={https://aclanthology.org/2023.emnlp-main.643/}
 }
 
 @inproceedings{pangAuditingCrossCulturalConsistency2023,
@@ -515,4 +521,59 @@
   booktitle={Proceedings of the 1st Workshop on Evaluating Evaluations (EvalEval) at ACL 2026},
   year={2026},
   url={https://openreview.net/forum?id=GwJ6ypeh66}
+}
+
+% ============================================================
+% POLITICAL BIAS AND SELF-REFLECTIVE BIAS MEASUREMENT
+% ============================================================
+
+% [NEW] Political bias in LLMs — content and rhetorical framing
+@inproceedings{bang2024measuring,
+  title={Measuring Political Bias in Large Language Models: What Is Said and How It Is Said},
+  author={Bang, Yejin and Chen, Delong and Lee, Nayeon and Fung, Pascale},
+  booktitle={Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages={11142--11159},
+  year={2024},
+  publisher={Association for Computational Linguistics},
+  doi={10.18653/v1/2024.acl-long.600},
+  url={https://aclanthology.org/2024.acl-long.600/}
+}
+
+% [NEW] Self-reflective social bias measurement in LLMs
+@inproceedings{shin2024ask,
+  title={Ask {LLM}s Directly, ``What shapes your bias?'': Measuring Social Bias in Large Language Models},
+  author={Shin, Jisu and Song, Hoyun and Lee, Huije and Jeong, Soyeong and Park, Jong},
+  booktitle={Findings of the Association for Computational Linguistics: ACL 2024},
+  pages={16122--16143},
+  year={2024},
+  publisher={Association for Computational Linguistics},
+  doi={10.18653/v1/2024.findings-acl.954},
+  url={https://aclanthology.org/2024.findings-acl.954/}
+}
+
+% ============================================================
+% OUTPUT DIVERSITY / HOMOGENEITY
+% ============================================================
+
+% [NEW] Low diversity in LLM stories — 11 words appear in 88% of outputs across models
+@misc{hamilton2026elias,
+  title={Elias in the Lighthouse, Again? Diagnosing Low Diversity in {LLM} Stories},
+  author={Hamilton, Sil and Mimno, David},
+  year={2026},
+  month=may,
+  eprint={2605.26492},
+  primaryclass={cs.CL},
+  publisher={arXiv},
+  doi={10.48550/arXiv.2605.26492},
+  url={https://arxiv.org/abs/2605.26492}
+}
+
+% [NEW] Journalism documenting the Elias Thorne / lighthouse homogeneity phenomenon
+@misc{cole2026elias,
+  title={Chatbots Keep Telling Stories About Lighthouse Keeper `{Elias Thorne}'. We Might Know Why},
+  author={Cole, Samantha},
+  year={2026},
+  month=jun,
+  howpublished={404 Media},
+  url={https://www.404media.co/elias-thorne-chatbots-llms-chatgpt-lighthouse-keeper-story/}
 }
