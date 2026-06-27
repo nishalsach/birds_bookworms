@@ -22,13 +22,14 @@ with open('../all_211_feminine_tropes.csv', newline='', encoding='utf-8') as f:
     rows = list(csv.DictReader(f))
 
 tropes_to_keep = ('CagedBirdMetaphor', 'CuteBookworm', 'EverythingsBetterWithSparkles',
-                  'NatureLover', 'DruggedLipstick', 'TreeCover', 'HotScientist', 'RedheadInGreen')
+                  'NatureLover', 'DruggedLipstick', 'TreeCover', 'HotScientist', 'RedheadInGreen',
+                  'AcademicAlphaBitch', 'PromWrecker', 'BracesOfOrthodonticOverkill')
 anchor_map = {r['TropeName']: r for r in rows if r['TropeName'] in tropes_to_keep}
 anchor = [anchor_map[t] for t in tropes_to_keep]
 rest   = [r for r in rows if r['TropeName'] not in tropes_to_keep]
 
 random.seed(2027)
-sample = anchor + random.sample(rest, 22)
+sample = anchor + random.sample(rest, 21)
 
 # --- Save CSV (real data only, no ellipsis row) ---
 csv_columns = ['#', 'TropeName', 'They', 'He', 'She', 'Ambiguous']
