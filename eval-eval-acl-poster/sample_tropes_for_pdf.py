@@ -29,7 +29,7 @@ anchor = [anchor_map[t] for t in tropes_to_keep]
 rest   = [r for r in rows if r['TropeName'] not in tropes_to_keep]
 
 random.seed(2027)
-sample = anchor + random.sample(rest, 21)
+sample = anchor + random.sample(rest, 3)
 
 # --- Save CSV (real data only, no ellipsis row) ---
 csv_columns = ['#', 'TropeName', 'They', 'He', 'She', 'Ambiguous']
@@ -129,3 +129,55 @@ fig.savefig('tropes_for_poster.svg', bbox_inches='tight')
 plt.close(fig)
 
 print(f'Saved tropes_for_poster.csv ({len(csv_rows)} rows), .pdf, and .svg')
+
+# --- Full grid of all 211 trope names on a gray/white checkerboard ---
+# DruggedLipstick first, SympatheticSue last; other kept tropes next, then rest
+SYMPATHETIC_SUE = 'SympatheticSue'
+kept_set  = set(tropes_to_keep)
+all_names = (
+    ['DruggedLipstick']
+    + [t for t in tropes_to_keep if t != 'DruggedLipstick']
+    + [r['TropeName'] for r in rows if r['TropeName'] not in kept_set and r['TropeName'] != SYMPATHETIC_SUE]
+    + [SYMPATHETIC_SUE]
+)
+
+# Balanced column heights: 16 cols, first (211%16)=3 cols get 14 rows, rest get 13
+GRID_COLS = 16
+extra     = len(all_names) % GRID_COLS   # 3
+base_h    = len(all_names) // GRID_COLS  # 13
+GRID_ROWS = base_h + (1 if extra else 0) # 14
+
+GRID_FONT = 6.5
+CELL_W    = 1.3
+CELL_H    = 0.34
+
+gfig, gax = plt.subplots(figsize=(GRID_COLS * CELL_W, GRID_ROWS * CELL_H))
+gax.set_xlim(0, GRID_COLS)
+gax.set_ylim(0, GRID_ROWS)
+gax.axis('off')
+
+# Precompute (col, row) for each name — column-major, balanced heights
+positions = []
+for c in range(GRID_COLS):
+    h = base_h + (1 if c < extra else 0)
+    for r in range(h):
+        positions.append((c, r))
+
+for idx, name in enumerate(all_names):
+    col, row = positions[idx]
+    y = GRID_ROWS - 1 - row
+    bg = LIGHT_GRAY if (row + col) % 2 else 'white'
+    gax.add_patch(plt.Rectangle((col, y), 1, 1, facecolor=bg, edgecolor='white', clip_on=False))
+
+for idx, name in enumerate(all_names):
+    col, row = positions[idx]
+    y = GRID_ROWS - 1 - row
+    txt = gax.text(col + 0.02, y + 0.5, name, va='center', ha='left',
+                   fontsize=GRID_FONT, fontfamily=FONT, clip_on=True)
+    txt.set_clip_path(plt.Rectangle((col, y), 1, 1, transform=gax.transData))
+
+gfig.savefig('table-all-tropes.pdf', bbox_inches='tight', dpi=150)
+gfig.savefig('table-all-tropes.svg', bbox_inches='tight')
+plt.close(gfig)
+
+print(f'Saved table-all-tropes.pdf and .svg ({len(all_names)} tropes, {GRID_COLS}x{GRID_ROWS} grid)')
